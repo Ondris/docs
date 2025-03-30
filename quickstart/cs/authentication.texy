@@ -122,13 +122,13 @@ Neautorizovaný uživatel už nemůže vidět stránku *create* ani *edit*, ale 
 Můžeme jej schovat využitím *n:atributu* jménem `n:if`. Pokud je tato podmínka `false`, celý tag `<a>`, včetně obsahu, zůstane skrytý.
 
 ```latte
-<a n:href="Edit:create" n:if="$user->isLoggedIn()">Vytvořit příspěvek</a>
+<a n:href="Edit:create" n:if="$user->isLoggedIn()">Napsat nový příspěvek</a>
 ```
 
 což je zkratka následujícího zápisu (neplést s `tag-if`):
 
 ```latte
-{if $user->isLoggedIn()}<a n:href="Edit:create">Vytvořit příspěvek</a>{/if}
+{if $user->isLoggedIn()}<a n:href="Edit:create">Napsat nový příspěvek</a>{/if}
 ```
 
 Stejným způsobem skryjeme také odkaz v šabloně `app/Presentation/Post/show.latte`.
